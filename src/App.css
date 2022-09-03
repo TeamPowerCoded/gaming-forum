@@ -1,0 +1,48 @@
+/***** NAVIGATION BAR *****/
+
+.navbar-brand > span{
+  font-family: var(--logo-font);
+  font-size: 32px;
+}
+
+.navbar{
+  background-color: var(--nav-bg);
+}
+     
+.login-btn {
+  background-image: linear-gradient(to right, #007991 0%, #78ffd6  51%, #007991  100%);
+  padding: 8px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.3s;
+  background-size: 200% auto;
+  color: white;            
+  border-radius: 0px;
+  border: 1px solid #58B19F;
+  }
+
+.login-btn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+}
+
+.register-btn{
+  padding: 8px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.3s;
+  color: #fff;          
+  border-radius: 0px;
+  border:none;
+  outline: 1px solid white;
+}
+
+.register-btn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #58B19F;
+  background-color: #fff;
+  outline: 1px solid transparent;
+
+}
+ 
+

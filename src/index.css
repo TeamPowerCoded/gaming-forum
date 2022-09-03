@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@300;400;500&display=swap');
+
+/***** INITIAL SETUP *****/
+
+:root{
+  /*font style*/
+  --logo-font: 'Bungee', cursive;
+  --normal-font: 'Poppins', serif;
+
+  /*background*/
+  --nav-bg: #303952;
+
+  /*color*/
+  --color-white: #fff;
+}
+
+body{
+  font-family: var(--normal-font);
+}
+
+
+
+
+
