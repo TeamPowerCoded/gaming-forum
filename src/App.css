@@ -12,7 +12,7 @@
      
 .login-btn {
   background-image: linear-gradient(to right, #007991 0%, #78ffd6  51%, #007991  100%);
-  padding: 8px 25px;
+  padding: 7px 35px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.3s;
@@ -27,23 +27,5 @@
   color: #fff;
 }
 
-.register-btn{
-  padding: 8px 25px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.3s;
-  color: #fff;          
-  border-radius: 0px;
-  border:none;
-  outline: 1px solid white;
-}
-
-.register-btn:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #58B19F;
-  background-color: #fff;
-  outline: 1px solid transparent;
-
-}
  
 

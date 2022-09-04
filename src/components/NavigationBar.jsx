@@ -15,11 +15,8 @@ function NavigationBar() {
           </span>
         </Link>
         <div className="nav-btns order-lg-2">
-          <Link to="/" className="btn login-btn me-2" type="button">
+          <Link to="/login" className="btn login-btn me-2" type="button">
             <span className="">LOGIN</span>
-          </Link>
-          <Link to="/" className="btn register-btn " type="button">
-            <span>REGISTER</span>
           </Link>
         </div>
 
