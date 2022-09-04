@@ -14,7 +14,7 @@ function NavigationBar() {
             PAWER<span style={{ color: "#58B19F" }}>CODED</span>{" "}
           </span>
         </Link>
-        <div className="nav-btns order-lg-2">
+        <div className="nav-btns order-lg-2 d-none d-lg-block">
           <Link to="/login" className="btn login-btn me-2" type="button">
             <span className="">LOGIN</span>
           </Link>
@@ -44,6 +44,11 @@ function NavigationBar() {
               <NavLink to="/contact-us" className="nav-link  text-uppercase">
                 CONTACT US
               </NavLink>
+            </li>
+            <li className="nav-item p-2 d-block d-lg-none">
+              <Link to="/login" className="btn login-btn me-2" type="button">
+                <span className="">LOGIN</span>
+              </Link>
             </li>
           </ul>
         </Navbar.Collapse>
