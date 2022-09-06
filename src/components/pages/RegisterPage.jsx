@@ -1,12 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import '../../App.css'
 
-export default function SignUpPage() {
+export default function RegisterPage() {
 
     return (
-        <div className="text-center m-5-auto">
+        <div className="text-center m-5">
             <h2>Join now!</h2>
             <h5>Create your forum account</h5>
             <form action="/home">

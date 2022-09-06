@@ -1,16 +1,20 @@
 import React from "react";
 import { Container, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShieldHalved } from "@fortawesome/free-solid-svg-icons";
 
 function NavigationBar() {
   return (
     <Navbar expand="lg" variant="dark" className="p-3">
       <Container>
-        <Link
-          to="/"
-          className="navbar-brand d-flex align-items-center justify-content-between"
-        >
+        <Link to="/" className="navbar-brand d-flex  justify-content-between">
           <span>
+            <FontAwesomeIcon
+              icon={faShieldHalved}
+              className="gameIcons me-2"
+              style={{ color: "#58B19F" }}
+            />
             PAWER<span style={{ color: "#58B19F" }}>CODED</span>{" "}
           </span>
         </Link>
@@ -24,7 +28,7 @@ function NavigationBar() {
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
         <Navbar.Collapse className="order-lg-1">
-          <ul className="navbar-nav mx-auto text-center">
+          <ul className="navbar-nav  text-center">
             <li className="nav-item p-2">
               <NavLink to="/" className="nav-link  text-uppercase">
                 HOME

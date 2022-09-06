@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Bungee&family=Monoton&family=Montserrat:wght@500;600;700&display=swap');
+
+
 
 /***** INITIAL SETUP *****/
 
 :root{
   /*font style*/
   --logo-font: 'Bungee', cursive;
-  --normal-font: 'Poppins', serif;
+  --normal-font: 'Montserrat', serif;
 
   /*background*/
-  --nav-bg: #303952;
+  --brand-bg: #1e272e;
 
   /*color*/
   --color-white: #fff;
@@ -16,7 +18,7 @@
 
 body{
   font-family: var(--normal-font);
-  background-color:#ece2e2;
+  background-color:#ebe4e4;
 }
 
 

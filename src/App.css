@@ -6,8 +6,8 @@
 }
 
 .navbar{
-  background-color: var(--nav-bg);
-  box-shadow: 0px 0px 10px 1px #58B19F;
+  background-color: var(--brand-bg);
+
 }
      
 .login-btn {
@@ -20,27 +20,33 @@
   color: white;            
   border-radius: 0px;
   border: 1px solid #58B19F;
+
   }
 
-.login-btn:hover {
+.login-btn:hover{
   background-position: right center; /* change the direction of the change here */
   color: #fff;
 }
+
+.btn-join{
+  background-image: linear-gradient(to right, #303952 0%, #505f89  51%, #545e78  100%);
+  padding: 11px 43px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.3s;
+  background-size: 200% auto;
+  color: white;            
+  border-radius: 0px;
+  border: 1px solid #303952;
+}
+.btn-join:hover{
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  border: 1px solid #303952;
+}
+
+
 /***    General     ***/
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif
-}
-
-body {
-    margin: 0 auto
-}
-
-.m-5-auto {
-    margin: 5rem auto
-}
 
 .primary-button {
     margin-top: 5rem;
@@ -56,51 +62,47 @@ body {
     text-transform: capitalize
 }
 
-/***    Landing Page     ***/
-.main-title,
-.main-para {
-    color: #f1f1f1
+/** Home Page **/
+
+.hero{
+  background: url('https://wallpaperaccess.com/full/1291020.jpg') no-repeat  center/cover;
+  box-shadow:inset 0 0 0 2000px rgba(48, 57, 82, 0.3);
+  height: 720px;
 }
 
-.main-title {
-    padding-top: 10rem;
-    font-size: 5rem;
-    font-family: 'Fascinate', cursive;
-    text-transform: uppercase
+.hero .container{
+  background-color: rgba(0, 0, 0, 0.25) !important;
 }
 
-.main-para {
-    font-size: 2.5rem;
-    text-Transform: capitalize
+.hero h1{
+  font-family: 'Bowlby One SC', cursive;
 }
 
-#reg_btn span {
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
+/** Services **/
+.services{
+  margin-top: -50px;
 }
 
-#reg_btn span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
+.services .col-md-4 div{
+  width: 100%;
+  height: 100px;
+  background-color: #1e272e;
+  color: #fff;
+  border-bottom: 5px solid #58B19F;
+  cursor:pointer;
+  transition: 0.2s;
 }
 
-#reg_btn:hover span {
-  padding-right: 25px;
+.services .gameIcons{
+color: #58B19F;
 }
+/* .services .col-md-4 div: hover{
 
-#reg_btn:hover span:after {
-  opacity: 1;
-  right: 0;
-}
+} */
 
 /***    Login Page     ***/
 h2 {
-    font-weight: 300
+    font-weight: 300;
 }
 
 form {
@@ -165,9 +167,23 @@ form span {
     float: left
 }
 
-/***    Home Page     ***/
-.home-page-title {
-    color: #222
+/** Forum page **/
+
+.forum-container .btn{
+  background-color: #3f4862 !important;
+  color: #ece2e2 !important;  
+  border-color:transparent !important;
 }
- 
+
+.forum-container .btn:hover{
+  background-color: var(--brand-bg) !important;
+  color: #fff !important;
+  border-color:transparent !important;
+}
+
+.isActive{
+  color: red !important;
+}
+
+
 
