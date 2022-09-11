@@ -1,14 +1,28 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import AddPosts from "./AddPosts";
-
 import ForumPosts from "./ForumPosts";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+// CALL IT ONCE IN YOUR APP
 
 function Forum() {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const notify = () =>
+    toast.success("New discussion Added", {
+      theme: "dark",
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
 
   return (
     <>
@@ -58,7 +72,8 @@ function Forum() {
 
       {/* Below is the modal */}
 
-      <AddPosts show={show} handleClose={handleClose} />
+      <AddPosts show={show} handleClose={handleClose} notify={notify} />
+      <ToastContainer />
     </>
   );
 }
