@@ -38,7 +38,7 @@ function Forum() {
       <Container>
         <div className="row mt-2">
           <div className="col-md-3 ">
-            <div class="d-flex flex-column p-5 bg-white shadow-sm rounded-1">
+            <div className="d-flex flex-column p-5 bg-white shadow-sm rounded-1">
               <small className="p-3">All Discussions</small>
               <small className="p-3">Private Discussions</small>
               <small className="p-3">Tags</small>

@@ -7,7 +7,7 @@ import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 function Services() {
   return (
     <div>
-      <Container className=" position-relative">
+      <Container className="position-relative">
         <div className="row services">
           <div className="col-md-4 p-2">
             <div className=" p-2 text-center d-flex align-items-center justify-content-center">

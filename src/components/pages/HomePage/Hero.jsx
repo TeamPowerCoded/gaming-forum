@@ -10,8 +10,8 @@ function Hero() {
             <h1>
               PAWER UP YOUR <span style={{ color: "#58B19F" }}>GAME!</span>
             </h1>
-            <p class="lead">Be updated, Be part of our Community</p>
-            <button class="btn btn-join mt-4">JOIN NOW</button>
+            <p className="lead">Be updated, Be part of our Community</p>
+            <button className="btn btn-join mt-4">JOIN NOW</button>
           </div>
         </div>
       </section>

@@ -41,7 +41,7 @@ function AddPosts({ show, handleClose }) {
               className=" rounded-0 "
             />
           </FloatingLabel>
-          <div class="d-flex justify-content-end">
+          <div className="d-flex justify-content-end">
             <Button variant="primary" className="rounded-0 mt-2 ">
               SUBMIT
             </Button>

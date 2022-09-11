@@ -185,5 +185,18 @@ form span {
   color: red !important;
 }
 
+/** NEWS **/
+
+
+.right-stick{
+  display:block;
+  height: 2px;
+  background-color: #58B19F;
+}
+
+
+.card-title{
+color: #58B19F;
+}
 
 
