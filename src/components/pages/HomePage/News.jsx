@@ -24,7 +24,7 @@ function News() {
                     alt=""
                   />
                   <div className="card-body bg-dark">
-                    <h5 class="card-title">NEWS 1</h5>
+                    <h5 className="card-title">NEWS 1</h5>
                     <p className="card-text text-white small">
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
@@ -41,7 +41,7 @@ function News() {
                     alt=""
                   />
                   <div className="card-body bg-dark ">
-                    <h5 class="card-title">NEWS 1</h5>
+                    <h5 className="card-title">NEWS 1</h5>
                     <p className="card-text text-white small">
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
@@ -58,7 +58,7 @@ function News() {
                     alt=""
                   />
                   <div className="card-body bg-dark ">
-                    <h5 class="card-title">NEWS 1</h5>
+                    <h5 className="card-title">NEWS 1</h5>
                     <p className="card-text text-white small">
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
@@ -75,7 +75,7 @@ function News() {
                     alt=""
                   />
                   <div className="card-body bg-dark ">
-                    <h5 class="card-title">NEWS 1</h5>
+                    <h5 className="card-title">NEWS 1</h5>
                     <p className="card-text text-white small">
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
