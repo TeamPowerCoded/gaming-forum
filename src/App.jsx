@@ -17,7 +17,9 @@ function App() {
   console.log(currentUser);
 
   onAuthStateChanged(auth, (user) => {
-    if (user) {
+    if (user.displayName === null) {
+      setCurrentUser([]);
+    } else if (user.displayName) {
       setCurrentUser(user);
       setIsLoggedIn(true);
     } else {

@@ -37,7 +37,7 @@ function NavigationBar({ currentUser, isLoggedIn, setIsLoggedIn }) {
           {isLoggedIn ? (
             <DropdownButton
               id="dropdown-basic-button"
-              title={`${currentUser?.displayName}`}
+              title={`${currentUser.displayName}`}
             >
               <Dropdown.Item>{currentUser.email}</Dropdown.Item>
               <Dropdown.Item onClick={logoutUser}>Logout</Dropdown.Item>
