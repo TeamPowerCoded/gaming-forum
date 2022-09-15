@@ -7,8 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { db } from "../../config/firebase";
 
-// CALL IT ONCE IN YOUR APP
-
 function Forum() {
   const [posts] = useCollection(db.collection("posts"));
   const [show, setShow] = useState(false);
