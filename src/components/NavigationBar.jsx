@@ -1,10 +1,22 @@
-import React from "react";
-import { Container, Navbar } from "react-bootstrap";
+// import React, { useState } from "react";
+import { Container, Dropdown, DropdownButton, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShieldHalved } from "@fortawesome/free-solid-svg-icons";
+import { auth } from "../config/firebase";
+import { signOut } from "firebase/auth";
 
-function NavigationBar() {
+function NavigationBar({ currentUser, isLoggedIn, setIsLoggedIn }) {
+  const logoutUser = () => {
+    signOut(auth)
+      .then(() => {
+        setIsLoggedIn(false);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <Navbar expand="lg" variant="dark" className="p-3">
       <Container>
@@ -19,9 +31,22 @@ function NavigationBar() {
           </span>
         </Link>
         <div className="nav-btns order-lg-2 d-none d-lg-block">
-          <Link to="/login" className="btn login-btn me-2" type="button">
+          {/* <Link to="/login" className="btn login-btn me-2" type="button">
             <span className="">LOGIN</span>
-          </Link>
+          </Link> */}
+          {isLoggedIn ? (
+            <DropdownButton
+              id="dropdown-basic-button"
+              title={`${currentUser.displayName}`}
+            >
+              <Dropdown.Item>{currentUser.email}</Dropdown.Item>
+              <Dropdown.Item onClick={logoutUser}>Logout</Dropdown.Item>
+            </DropdownButton>
+          ) : (
+            <Link to="/login" className="btn login-btn me-2" type="button">
+              <span className="">LOGIN</span>
+            </Link>
+          )}
         </div>
 
         <Navbar.Toggle className="border-0">
