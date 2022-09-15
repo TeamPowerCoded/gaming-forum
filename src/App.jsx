@@ -6,6 +6,7 @@ import ForgetPasswordPage from "./components/pages/ForgetPasswordPage";
 import NavigationBar from "./components/NavigationBar";
 import Forum from "./components/pages/Forum";
 import Home from "./components/pages/Home";
+import AboutUs from "./components/pages/AboutUs";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/forget-password" element={<ForgetPasswordPage />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
   );
