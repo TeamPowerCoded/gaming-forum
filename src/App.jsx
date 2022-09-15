@@ -6,6 +6,9 @@ import ForgetPasswordPage from "./components/pages/ForgetPasswordPage";
 import NavigationBar from "./components/NavigationBar";
 import Forum from "./components/pages/Forum";
 import Home from "./components/pages/Home";
+
+
+
 import AboutUs from "./components/pages/AboutUs";
 
 function App() {
