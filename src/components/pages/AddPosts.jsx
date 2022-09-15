@@ -2,24 +2,34 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import { addPost } from "../../redux/reduxSlice/postSlice";
-import { useDispatch } from "react-redux";
+// import { addPost } from "../../redux/reduxSlice/postSlice";
+// import { useDispatch } from "react-redux";
 import { useState } from "react";
+import { auth, db } from "../../config/firebase";
 
 function AddPosts({ show, handleClose, notify }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const user = auth.currentUser;
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(
-      addPost({
-        title,
-        description,
-      })
-    );
+    // dispatch(
+    //   addPost({
+    //     title,
+    //     description,
+    //   })
+    // );
+
+    db.collection("posts").add({
+      username: user.displayName,
+      uid: user.uid,
+      title: title,
+      description: description,
+    });
+
     handleClose();
     setTitle("");
     setDescription("");

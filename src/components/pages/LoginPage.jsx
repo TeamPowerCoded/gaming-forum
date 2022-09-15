@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -26,7 +28,20 @@ export default function LoginPage() {
         }
       })
       .catch((error) => {
-        console.log(error);
+        const errorCode = error.code;
+        const notify = () =>
+          toast.error(errorCode, {
+            theme: "dark",
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+          });
+
+        notify();
       });
   };
 
@@ -68,6 +83,7 @@ export default function LoginPage() {
           First time? <Link to="/register">Create an account</Link>
         </span>
       </Form>
+      <ToastContainer />
     </div>
   );
 }

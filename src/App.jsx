@@ -14,14 +14,14 @@ function App() {
   const [currentUser, setCurrentUser] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  console.log(currentUser);
-
   onAuthStateChanged(auth, (user) => {
-    if (user.displayName === null) {
-      setCurrentUser([]);
-    } else if (user.displayName) {
-      setCurrentUser(user);
-      setIsLoggedIn(true);
+    if (user !== null) {
+      user.providerData.forEach((profile) => {
+        if (profile.displayName !== null) {
+          setCurrentUser(user);
+          setIsLoggedIn(true);
+        }
+      });
     } else {
       setIsLoggedIn(false);
     }
