@@ -10,6 +10,10 @@ import { auth } from "./config/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useState } from "react";
 
+
+
+import AboutUs from "./components/pages/AboutUs";
+
 function App() {
   const [currentUser, setCurrentUser] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -45,6 +49,7 @@ function App() {
         />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/forget-password" element={<ForgetPasswordPage />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
   );
