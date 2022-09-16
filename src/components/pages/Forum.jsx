@@ -4,6 +4,7 @@ import AddPosts from "./AddPosts";
 import ForumPosts from "./ForumPosts";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "../Footer";
 
 // CALL IT ONCE IN YOUR APP
 
@@ -74,6 +75,7 @@ function Forum() {
 
       <AddPosts show={show} handleClose={handleClose} notify={notify} />
       <ToastContainer />
+      <Footer />
     </>
   );
 }
