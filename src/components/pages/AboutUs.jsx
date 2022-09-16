@@ -1,9 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook} from "@fortawesome/free-brands-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import {faInstagram} from "@fortawesome/free-brands-svg-icons";
-import {faPinterest} from "@fortawesome/free-brands-svg-icons";
 import Footer from "../Footer";
 import { Container } from "react-bootstrap";
 
@@ -23,22 +18,7 @@ function AboutUs() {
         <div class="d-flex bg-white flex-column bd-highlight mb-3">
           <div class="p-3 bd-highlight"></div>
           <div class="d-flex flex-nowrap justify-content-center">
-            <div class="order-1 p-2 bd-highlight justify-content-left">
-              <div class="p-2 bd-highlight">
-                <FontAwesomeIcon icon={faFacebook} className="AppIcon" />
-              </div>
-              <div class="p-2 bd-highlight">
-                <FontAwesomeIcon icon={faTwitter} className="AppIcon" />
-              </div>
-              <div class="p-2 bd-highlight">
-                <FontAwesomeIcon icon={faInstagram} className="AppIcon" />
-              </div>
-              <div class="p-2 bd-highlight">
-                <FontAwesomeIcon icon={faPinterest} className="AppIcon" />
-              </div>
-            </div>
-
-            <div class="order-2 p-2 text-center">
+            <div class="p-2 text-center">
               <p class="p-2">
                 PawerCoded is a multi-platform technology and lifestyle media
                 company.
@@ -61,8 +41,8 @@ function AboutUs() {
             </div>
           </div>
           <Container>
-          <section className="banner p-5 d-flex flex-row align-items-center justify-content-center">
-          </section>
+            <section className="banner d-flex flex-row align-items-center justify-content-center">
+            </section>
           </Container>
         </div>
       </section>

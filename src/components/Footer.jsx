@@ -25,19 +25,29 @@ function Footer() {
         <div className="d-flex justify-content-center">
         <ul className="p-2 list-unstyled d-flex">
           <li className="text-decoration-none text-muted fs-4 me-4">
-            <FontAwesomeIcon icon={faFacebook} />
+            <a href="https://www.facebook.com">
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
           </li>
           <li className="text-decoration-none text-muted fs-4 me-4">
-            <FontAwesomeIcon icon={faTwitter} />
+            <a href="https://www.twitter.com">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
           </li>
           <li className="text-decoration-none text-muted fs-4 me-4">
-            <FontAwesomeIcon icon={faInstagram} />
+            <a href="https://www.instagram.com">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
           </li>
           <li className="text-decoration-none text-muted fs-4 me-4">
-            <FontAwesomeIcon icon={faGooglePlay} />
+            <a href="https://www.googleplay.com">
+              <FontAwesomeIcon icon={faGooglePlay} />
+            </a>
           </li>
           <li className="text-decoration-none text-muted fs-4 me-4">
-            <FontAwesomeIcon icon={faYoutube} />
+            <a href="https://www.youtube.com">
+              <FontAwesomeIcon icon={faYoutube} />
+            </a>
           </li>
         </ul>
         </div>
