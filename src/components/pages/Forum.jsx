@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import AddPosts from "./AddPosts";
-import ForumPosts from "./ForumPosts";
+// import ForumPosts from "./ForumPosts";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../Footer";
 
 // CALL IT ONCE IN YOUR APP
+import { useCollection } from "react-firebase-hooks/firestore";
+import { db } from "../../config/firebase";
 
 function Forum() {
+  const [posts] = useCollection(db.collection("posts"));
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -62,7 +65,20 @@ function Forum() {
             </div>
           </div>
           <div className="col-md-9">
-            <ForumPosts />
+            <div className="row g-2">
+              {posts?.docs.map((doc) => (
+                <div className="col-md-12">
+                  <div className="card">
+                    <div className="card-body">
+                      <h6 className="card-title">{doc.data().title}</h6>
+                      <small class="card-text text-muted">
+                        {doc.data().description}
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Container>

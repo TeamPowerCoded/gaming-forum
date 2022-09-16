@@ -18,15 +18,17 @@ export default function RegisterPage() {
     e.preventDefault();
 
     createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+      .then(async (userCredential) => {
         // Signed in
         const user = userCredential.user;
         if (user) {
-          updateProfile(auth.currentUser, { displayName: username }).then(
+          await updateProfile(auth.currentUser, { displayName: username }).then(
             () => {
               //profile updated
               const timer = setTimeout(() => {
-                navigate("/");
+                if (user.displayName !== null) {
+                  navigate("/");
+                }
               }, 500);
               timer();
             }

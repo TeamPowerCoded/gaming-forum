@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Services from "./Services";
 
 function Hero() {
@@ -11,7 +12,9 @@ function Hero() {
               PAWER UP YOUR <span style={{ color: "#58B19F" }}>GAME!</span>
             </h1>
             <p className="lead">Be updated, Be part of our Community</p>
-            <button className="btn btn-join mt-4">JOIN NOW</button>
+            <Link to="/register" className="btn btn-join mt-4">
+              JOIN NOW
+            </Link>
           </div>
         </div>
       </section>
