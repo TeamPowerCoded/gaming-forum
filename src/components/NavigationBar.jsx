@@ -1,6 +1,6 @@
 // import React, { useState } from "react";
 import { Container, Dropdown, DropdownButton, Navbar } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShieldHalved } from "@fortawesome/free-solid-svg-icons";
 import { auth } from "../config/firebase";
@@ -8,12 +8,14 @@ import { signOut } from "firebase/auth";
 // import { useEffect } from "react";
 
 function NavigationBar({ currentUser, isLoggedIn, setIsLoggedIn }) {
+  const navigate = useNavigate();
   // const user = auth.currentUser;
 
   const logoutUser = () => {
     signOut(auth)
       .then(() => {
         setIsLoggedIn(false);
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
