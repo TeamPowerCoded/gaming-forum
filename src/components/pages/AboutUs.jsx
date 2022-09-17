@@ -1,15 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faGooglePlay,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faPinterest } from "@fortawesome/free-brands-svg-icons";
-import { faShieldHalved } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import Footer from "../Footer";
+import { Container } from "react-bootstrap";
 
 function AboutUs() {
   return (
@@ -24,6 +15,7 @@ function AboutUs() {
         </div>
       </section>
       <section>
+<<<<<<< HEAD
         <div className="d-flex bg-white flex-column bd-highlight mb-3">
           <div className="p-3 bd-highlight"></div>
           <div className="d-flex flex-nowrap justify-content-center">
@@ -44,6 +36,13 @@ function AboutUs() {
 
             <div className="order-2 p-2 text-center">
               <p className="p-2">
+=======
+        <div class="d-flex bg-white flex-column bd-highlight mb-3">
+          <div class="p-3 bd-highlight"></div>
+          <div class="d-flex flex-nowrap justify-content-center">
+            <div class="p-2 text-center">
+              <p class="p-2">
+>>>>>>> b7abcb95df7e10d78b4ee163ad0957163077ce86
                 PawerCoded is a multi-platform technology and lifestyle media
                 company.
               </p>
@@ -64,6 +63,7 @@ function AboutUs() {
               </p>
             </div>
           </div>
+<<<<<<< HEAD
 
           <section className="banner bg-dark p-5 d-flex flex-row align-items-center justify-content-center"></section>
 
@@ -258,8 +258,15 @@ function AboutUs() {
             </div> */}
           </footer>
           {/*    */}
+=======
+          <Container>
+            <section className="banner d-flex flex-row align-items-center justify-content-center">
+            </section>
+          </Container>
+>>>>>>> b7abcb95df7e10d78b4ee163ad0957163077ce86
         </div>
       </section>
+      <Footer />
     </>
   );
 }

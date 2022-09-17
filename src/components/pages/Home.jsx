@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer";
 import Blog from "./HomePage/Blog";
 import Hero from "./HomePage/Hero";
 import News from "./HomePage/News";
@@ -9,6 +10,7 @@ function Home() {
       <Hero />
       <News />
       <Blog />
+      <Footer />
     </>
   );
 }

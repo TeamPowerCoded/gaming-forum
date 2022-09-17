@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import AddPosts from "./AddPosts";
-import ForumPosts from "./ForumPosts";
+// import ForumPosts from "./ForumPosts";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "../Footer";
+
+// CALL IT ONCE IN YOUR APP
 import { useCollection } from "react-firebase-hooks/firestore";
 import { db } from "../../config/firebase";
 import { auth } from "../../config/firebase";
@@ -94,6 +97,7 @@ function Forum({ currentUser }) {
 
       <AddPosts show={show} handleClose={handleClose} notify={notify} />
       <ToastContainer />
+      <Footer />
     </>
   );
 }
