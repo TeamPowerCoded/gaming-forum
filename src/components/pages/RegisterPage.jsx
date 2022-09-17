@@ -24,7 +24,7 @@ export default function RegisterPage() {
         if (user) {
           await updateProfile(auth.currentUser, { displayName: username }).then(
             () => {
-              //profile updated
+              user.reload();
               const timer = setTimeout(() => {
                 if (user.displayName !== null) {
                   navigate("/");

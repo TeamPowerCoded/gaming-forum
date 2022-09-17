@@ -7,12 +7,12 @@ import NavigationBar from "./components/NavigationBar";
 import Forum from "./components/pages/Forum";
 import Home from "./components/pages/Home";
 import { auth } from "./config/firebase";
+import ContactUs from "./components/pages/ContactUs";
 import { onAuthStateChanged } from "firebase/auth";
 import { useState } from "react";
 
-
-
 import AboutUs from "./components/pages/AboutUs";
+import Discussion from "./components/pages/Discussion";
 
 function App() {
   const [currentUser, setCurrentUser] = useState([]);
@@ -20,12 +20,8 @@ function App() {
 
   onAuthStateChanged(auth, (user) => {
     if (user !== null) {
-      user.providerData.forEach((profile) => {
-        if (profile.displayName !== null) {
-          setCurrentUser(user);
-          setIsLoggedIn(true);
-        }
-      });
+      setCurrentUser(user);
+      setIsLoggedIn(true);
     } else {
       setIsLoggedIn(false);
     }
@@ -40,7 +36,10 @@ function App() {
       />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/forum" element={<Forum />} />
+        <Route
+          path="/forum"
+          element={<Forum currentUser={currentUser.uid} />}
+        />
         <Route
           path="/login"
           element={
@@ -50,6 +49,8 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/forget-password" element={<ForgetPasswordPage />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/discussion" element={<Discussion />} />
       </Routes>
     </BrowserRouter>
   );

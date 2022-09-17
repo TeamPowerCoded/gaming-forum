@@ -225,3 +225,11 @@ color: #58B19F;
 /* .nav-link:hover{
   color: var(--pink) !important;
 } */
+
+#JotFormIFrame-222574376156966{
+  display: block;
+  border: 0px;
+  margin: 50px auto;
+  height: 800px;
+  width: 100%;
+}

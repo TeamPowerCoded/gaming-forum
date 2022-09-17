@@ -5,8 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShieldHalved } from "@fortawesome/free-solid-svg-icons";
 import { auth } from "../config/firebase";
 import { signOut } from "firebase/auth";
+// import { useEffect } from "react";
 
 function NavigationBar({ currentUser, isLoggedIn, setIsLoggedIn }) {
+  // const user = auth.currentUser;
+
   const logoutUser = () => {
     signOut(auth)
       .then(() => {

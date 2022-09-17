@@ -5,7 +5,7 @@ function Blog() {
   return (
     <section className="bg-dark py-5">
       <Container>
-        <div className="row ">
+        <div className="row p-3 ">
           <div className="col-md-8 p-0">
             <div className="d-flex">
               <div className="section-title pe-2 flex-grow-0 d-flex align-items-center justify-content-center py-2">

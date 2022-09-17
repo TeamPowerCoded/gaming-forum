@@ -6,9 +6,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { db } from "../../config/firebase";
+import { auth } from "../../config/firebase";
 
-function Forum() {
-  const [posts] = useCollection(db.collection("posts"));
+function Forum({ currentUser }) {
+  const user = auth.currentUser;
+  const dbPosts = db.collection("posts").orderBy("timestamp", "desc");
+  const [posts] = useCollection(dbPosts);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -38,17 +41,20 @@ function Forum() {
           </div>
         </div>
       </Container>
+
       <Container className="forum-container">
-        <div className="row">
-          <div className="col-md-3 ">
-            <button
-              className="btn discussion-btn rounded-1 w-100"
-              onClick={handleShow}
-            >
-              Start a New Discussion
-            </button>
+        {user && (
+          <div className="row">
+            <div className="col-md-3 ">
+              <button
+                className="btn discussion-btn rounded-1 w-100"
+                onClick={handleShow}
+              >
+                Start a New Discussion
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </Container>
       <Container>
         <div className="row mt-2">
@@ -64,16 +70,16 @@ function Forum() {
           <div className="col-md-9">
             <div className="row g-2">
               {posts?.docs.map((doc) => (
-                <div className="col-md-12">
-                  <div className="card">
-                    <div className="card-body">
-                      <h6 className="card-title">{doc.data().title}</h6>
-                      <small class="card-text text-muted">
-                        {doc.data().description}
-                      </small>
-                    </div>
-                  </div>
-                </div>
+                <ForumPosts
+                  key={doc.id}
+                  id={doc.id}
+                  title={doc.data().title}
+                  description={doc.data().description}
+                  username={doc.data().username}
+                  timestamp={doc.data().timestamp}
+                  userId={doc.data().uid}
+                  uid={currentUser}
+                />
               ))}
             </div>
           </div>

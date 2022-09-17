@@ -6,6 +6,7 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 // import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { auth, db } from "../../config/firebase";
+import firebase from "firebase/compat/app";
 
 function AddPosts({ show, handleClose, notify }) {
   const [title, setTitle] = useState("");
@@ -24,6 +25,7 @@ function AddPosts({ show, handleClose, notify }) {
     // );
 
     db.collection("posts").add({
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       username: user.displayName,
       uid: user.uid,
       title: title,
