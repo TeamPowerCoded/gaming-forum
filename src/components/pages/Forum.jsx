@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import AddPosts from "./AddPosts";
-// import ForumPosts from "./ForumPosts";
+
+import ForumPosts from "./ForumPosts";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../Footer";
